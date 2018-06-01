@@ -7,12 +7,15 @@
 //
 
 import UIKit
+// TODO: STEP 1
 import Stitch
 
 class ViewController: UIViewController {
 
     @IBOutlet private var textfield: UITextField!
-    @IBOutlet private var call: UIButton!
+
+    // TODO: STEP 2
+    private var call: Call?
 
     // MARK:
     // MARK: Lifecycle
@@ -20,12 +23,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // logs
+        // TODO: STEP 3
         ConversationClient.configuration = Configuration.init(with: .info)
-
-        // Login to Stitch services
         ConversationClient.instance
-            .login(with: "TOKEN")
+            .login(with: "JWT_TOKEN")
             .subscribe()
     }
 
@@ -34,18 +35,23 @@ class ViewController: UIViewController {
 
     @IBAction
     func makeCall() {
-        guard let number = textfield.text else {
-            print("DEMO - No number")
+        guard let number = textfield.text else { return }
 
-            return
-        }
-
+        // TODO: STEP 4
         ConversationClient.instance.media.callPhone(number, onSuccess: { result in
-            let call = result.call
+            self.call = result.call
 
-            print("DEMO - Created call: \(call)")
+            print("DEMO - Created call")
         }) { error in
             print("DEMO - Failed to make call: \(error)")
         }
+    }
+
+    @IBAction
+    func hangup() {
+        // TODO: STEP 5
+        call?.hangUp(onSuccess: {
+            print("DEMO - Hangup call successful")
+        })
     }
 }
