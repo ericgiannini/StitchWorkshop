@@ -1,4 +1,4 @@
-# PSTN - IP Calling with Nexmo In-App Voice
+# IP - PSTN Calling with Nexmo In-App Voice
 
 ## Why you are here?
 
