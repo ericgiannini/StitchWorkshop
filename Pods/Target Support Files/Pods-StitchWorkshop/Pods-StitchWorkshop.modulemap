@@ -1,0 +1,6 @@
+framework module Pods_StitchWorkshop {
+  umbrella header "Pods-StitchWorkshop-umbrella.h"
+
+  export *
+  module * { export * }
+}
