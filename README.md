@@ -2,14 +2,14 @@
 
 ## Why you are here?
 
-- engagement
-- feedback
-- ideas
+- Engagement
+- Feedback
+- Ideas
 
 ## What is IP Calling
 
-- discuss Call API
-- streamlining the use our JWT, Nexmo App and NCCO
+- Discuss Call API
+- Streamline the use our JWT, Nexmo App and NCCO
 
 
 ## Let's Start Programming!
@@ -27,9 +27,9 @@
 - Add button and text field UI
 
 ## Try it out! 🎉 
-- login with our test JWT token
+- Login with our test JWT token
 - Use Call API to make personal call
-- start talking
+- Start talking
 
 ## Questions & Answer
 - Closing
